@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Hi!",
+    "expect_retrieval": false,
+    "reference": "A short friendly greeting that offers help with questions about sharing information with AI tools. No search, no citations."
+  },
+  {
+    "question": "What can you help me with?",
+    "expect_retrieval": false,
+    "reference": "Explains it answers questions about AI risks and sharing data with AI tools, grounded in NIST AI 600-1 with page citations. No search."
+  },
+  {
+    "question": "What does NIST say about data privacy risks in generative AI?",
+    "expect_retrieval": true,
+    "reference": "GAI systems can be trained on or reveal personal data; risks include leakage of sensitive information, inference of personal attributes, memorisation of training data, and difficulty exercising data rights. Should cite the Data Privacy section (around p. 7-8)."
+  },
+  {
+    "question": "Can I paste a client contract into ChatGPT to summarise it?",
+    "expect_retrieval": true,
+    "reference": "Frames the risks (data privacy and confidentiality, intellectual property, value chain / third-party data handling) rather than a yes/no, points to suggested actions such as data governance and access controls, and recommends checking the organisation's own AI policy. Cites pages."
+  },
+  {
+    "question": "Is it safe to share internal meeting notes with an AI assistant?",
+    "expect_retrieval": true,
+    "reference": "Discusses data privacy and information security risks, possible leakage of sensitive business information, and suggested actions; advises checking the organisation's policy. Cites pages."
+  },
+  {
+    "question": "What is confabulation and why does it matter?",
+    "expect_retrieval": true,
+    "reference": "Confabulation is the production of confidently stated but erroneous or false content (hallucination); it matters because users may be misled and act on wrong information. Should cite the Confabulation section (around p. 6)."
+  },
+  {
+    "question": "What should an organisation do before deploying a generative AI tool?",
+    "expect_retrieval": true,
+    "reference": "Points to GOVERN and MAP suggested actions such as establishing policies, risk assessment, defining acceptable use, assessing third-party components, and human oversight. Cites pages."
+  },
+  {
+    "question": "What are the main generative AI risks NIST identifies?",
+    "expect_retrieval": true,
+    "reference": "Lists the twelve GAI risks including CBRN information, confabulation, dangerous or violent content, data privacy, environmental impacts, harmful bias and homogenization, human-AI configuration, information integrity, information security, intellectual property, obscene content, and value chain and component integration. Cites pages."
+  },
+  {
+    "question": "What are the EU AI Act penalty tiers?",
+    "expect_retrieval": true,
+    "reference": "States that the corpus (NIST AI 600-1) does not cover the EU AI Act or its penalties, and does not invent figures."
+  },
+  {
+    "question": "What is the capital of France?",
+    "expect_retrieval": false,
+    "reference": "Either declines as out of scope or answers briefly without searching the corpus; must not cite NIST pages."
+  },
+  {
+    "question": "What does the OAIC recommend about entering personal information into public AI chatbots?",
+    "expect_retrieval": true,
+    "reference": "OAIC recommends, as best practice, that organisations do not enter personal information, and particularly sensitive information, into publicly available generative AI tools because of significant and complex privacy risks. Cites OAIC pages."
+  },
+  {
+    "question": "What should an organisation do before adopting a commercially available AI product?",
+    "expect_retrieval": true,
+    "reference": "Conduct due diligence on suitability, take a privacy-by-design approach including a Privacy Impact Assessment, consider whether using personal information is necessary, and update privacy policies and notices to be transparent about AI use. Cites OAIC pages."
+  }
+]

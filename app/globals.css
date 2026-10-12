@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0f1e38;
+  --bg-deep: #0a1529;
+  --surface: #172c4e;
+  --surface-2: #1f3a66;
+  --line: #2d4d80;
+  --text: #ecf2fb;
+  --muted: #9bb0d1;
+  --accent: #5fc4ff;
+  --accent-2: #8f7bff;
+  --accent-ink: #081326;
+  --user: #27477a;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-deep: var(--bg-deep);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-ink: var(--accent-ink);
+  --color-user: var(--user);
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+
+html,
+body {
+  height: 100%;
+  color: var(--text);
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(900px 500px at 15% -10%, rgba(95, 196, 255, 0.22), transparent 60%),
+    radial-gradient(700px 500px at 100% 100%, rgba(143, 123, 255, 0.18), transparent 60%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: auto, auto, 32px 32px, 32px 32px;
+  background-attachment: fixed;
+}
+
+body {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Minimal markdown-ish rendering of assistant text */
+.answer p {
+  margin: 0 0 0.75rem;
+}
+.answer p:last-child {
+  margin-bottom: 0;
+}
+.answer ul {
+  margin: 0 0 0.75rem 1.1rem;
+  list-style: disc;
+}
+.answer li {
+  margin: 0.2rem 0;
+}
+.answer strong {
+  color: var(--text);
+}
+.cite {
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+  color: var(--accent);
+  background: rgba(92, 184, 242, 0.12);
+  border-radius: 4px;
+  padding: 0 0.3em;
+  white-space: nowrap;
+}
+
+@keyframes pulse-dot {
+  0%, 80%, 100% { opacity: 0.25; }
+  40% { opacity: 1; }
+}
+.dot {
+  animation: pulse-dot 1.2s infinite ease-in-out;
+}
+.dot:nth-child(2) { animation-delay: 0.15s; }
+.dot:nth-child(3) { animation-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .dot { animation: none; opacity: 0.7; }
+}
