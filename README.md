@@ -4,7 +4,7 @@ A public RAG chatbot for working professionals who are about to paste something 
 
 Built for the AIM Postgraduate Certificate in Generative & Agentic AI — Week 14 Graded Mini Project 14.3 ("Ship Your Own RAG").
 
-- **Live app:** _add your Vercel URL_
+- **Live app:** https://ctrl-safe-zeta.vercel.app/
 - **Stack:** Next.js 15 · Vercel AI SDK 5 · OpenAI-compatible chat + embedding models (gpt-4o-mini, text-embedding-3-small) · Upstash Vector · Tailwind 4 · LangSmith (evaluation)
 
 ## Corpus and attribution
